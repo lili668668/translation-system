@@ -8,6 +8,7 @@ import AppBar from './components/AppBar'
 import ErrorBoundary from './components/ErrorBoundary'
 import LoadingPage from './components/LoadingPage'
 import ErrorPage from './components/ErrorPage'
+import Router from './pages/Router'
 
 const theme = createMuiTheme()
 
@@ -26,7 +27,7 @@ const App = () => (
         <ThemeProvider theme={theme}>
           <ErrorBoundary errorPage={ErrorPage}>
             <React.Suspense fallback={<Fallback />}>
-              {/* router */}
+              <Router topComponent={AppBar} />
             </React.Suspense>
           </ErrorBoundary>
         </ThemeProvider>
